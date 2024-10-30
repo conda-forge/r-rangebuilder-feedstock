@@ -1,4 +1,4 @@
-{% set version = '2.1' %}
+{% set version = "2.2" %}
 {% set posix = 'm2-' if win else '' %}
 {% set native = 'm2w64-' if win else '' %}
 
@@ -10,10 +10,10 @@ source:
   url:
     - {{ cran_mirror }}/src/contrib/rangeBuilder_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/rangeBuilder/rangeBuilder_{{ version }}.tar.gz
-  sha256: fceee76e8ee2841261a49b4a36c8966224913def895acd3a15d42dee6acd02e5
+  sha256: 4bd7bda7b67c3c771493ed95a2a5aff44ab05df3d0f130f2962b1b9180689bbc
 
 build:
-  merge_build_host: True  # [win]
+  merge_build_host: true  # [win]
   number: 0
   rpaths:
     - lib/R/lib/
@@ -66,8 +66,7 @@ test:
 about:
   home: https://github.com/ptitle/rangeBuilder
   license: GPL-3.0-or-later
-  summary: Provides tools for filtering occurrence records, generating alpha-hull-derived range
-    polygons and mapping species distributions.
+  summary: Provides tools for filtering occurrence records, generating alpha-hull-derived range polygons and mapping species distributions.
   license_family: GPL3
   license_file:
     - '{{ environ["PREFIX"] }}/lib/R/share/licenses/GPL-3'
