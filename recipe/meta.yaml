@@ -1,6 +1,5 @@
 {% set version = "2.2" %}
 {% set posix = 'm2-' if win else '' %}
-{% set native = 'm2w64-' if win else '' %}
 
 package:
   name: r-rangebuilder
@@ -13,8 +12,7 @@ source:
   sha256: 4bd7bda7b67c3c771493ed95a2a5aff44ab05df3d0f130f2962b1b9180689bbc
 
 build:
-  merge_build_host: true  # [win]
-  number: 0
+  number: 1
   rpaths:
     - lib/R/lib/
     - lib/
@@ -48,7 +46,6 @@ requirements:
     - r-units
   run:
     - r-base
-    - {{ native }}gcc-libs         # [win]
     - r-rcpp >=0.12.9
     - r-alphahull >=2.5
     - r-pbapply
