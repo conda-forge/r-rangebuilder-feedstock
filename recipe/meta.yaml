@@ -12,7 +12,7 @@ source:
   sha256: 4bd7bda7b67c3c771493ed95a2a5aff44ab05df3d0f130f2962b1b9180689bbc
 
 build:
-  number: 1
+  number: 2
   missing_dso_whitelist:
     - '*/R.dll'            # [win]
   rpaths:
